@@ -2,28 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta property="og:title" content="Jamrock Cuisine">
+    <meta property="og:site_name" content="Momos Jamrock Cuisine">
+    <meta property="og:url" content=momosjamrockcuisine.com>
+    <meta property="og:description" content="Momos Jamrock Cuisine is a jamaican food truck based in newark">
+    <meta property="og:type" content=restaurant.menu>
+    <meta property="og:image" content=https://momosjamrockcuisine.com/PastaChicken.jpeg>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamrock Cuisine Food Truck</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
-        
+        gmp-map {
+            height: 100%;
+        }
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: rgb(227, 225, 220);
+            min-height: 100vh;
         }
         header {
-            background-color: #008000;
+            /* background-color: #008000; */
             color: white;
             text-align: center;
             padding: 0.5em 0;
+
         }
         header h1 {
             margin: 0;
             font-size: 1.5em;
         }
         nav {
-            background-color: #ffd700;
+            /* background-color: #ffd700; */
             padding: 0.5em;
             min-height: 0.5em;
             text-align: center;
@@ -35,6 +46,8 @@
             font-weight: bold;
         }
         .hero {
+            box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.31);
+
             background-image: url('PastaChicken.jpeg'); /* Add a URL to your hero image */
             background-size: auto 100%;            
             background-position: center;
@@ -71,16 +84,31 @@
             z-index: 2;
             position: relative;
         }
+
         .container {
-            padding: 2em;
+            padding: 1em;
+
         }
-        .about, .menu {
+        .about, .menu, .find {
             background-color: white;
-            margin: 2em 0;
-            padding: 2em;
+            margin: 1em 0;
+            padding: 1em;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
         }
+        @media screen and (min-width: 480px) {
+            .footer {
+                position: fixed;
+                bottom: 0;
+
+            }
+            .container , .about, .menu, .find {
+            padding: 2em;
+            margin: 2em 0;
+            
+        }
+    }
+        
         hr {
             background-color: black;
             opacity: 50%;
@@ -88,11 +116,11 @@
             border: none;
 
         }
-        .menu {
-            background-color: #0080006a;
-        }
-        .about {
+        .yellow {
             background-color: #ffd9007a;
+        }
+        .green {
+            background-color: #0080006a;
 
         }
         .menu-item{
@@ -100,6 +128,10 @@
             min-width: 300px;
             margin: 1em 1em;
             text-align: center;
+            background-color: aliceblue;
+            box-shadow: 2px 2px 9px 0px rgba(0,0,0,0.31);
+            padding: 10px;
+            border-radius: 5px;
 
             display: flex;
             flex-direction: column;
@@ -108,6 +140,7 @@
         }
         .menu-item * {
             margin-bottom: 0px;
+
         }
         .menu img {
             border-radius: 10px;
@@ -117,42 +150,76 @@
             display: flex;
             overflow-x: auto;
         }
-        .menu h2 {
-        }
+
         .container {
             padding-top: 10px;
 
         }
-        .footer {
-            background-color: #008000;
-            color: white;
-            height: fit-content;
-            text-align: center;
-            padding: 0em 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        .black {
+            background-color: #090a09;
         }
-        
+        .close-button {
+            margin-left: auto;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer {
+            color: white;
+            padding-top: 1em;
+            padding-bottom: 0.5em;
+            text-align: center;
+            width: 100%;
+
+        }
+        #grad1 {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+        #map {
+            min-width: 50%;
+            min-height: 20em;
+        }
+        @media (min-width: 768px) {
+    html {
+        font-size: 125%;
+ } }
+
+
+
+
     </style>
 </head>
 <body>
-    <!-- <header>
-        <h1>Jamrock Cuisine Food Truck</h1>
-    </header>
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#menu">Menu</a>
-        <a href="#contact">Contact</a>
-    </nav> -->
+        
+        <header class="green">
+           <h1>Best Jamacian food in Newark! Made fresh to order</h1>
+       </header>
+       <nav class="yellow">
+           <!-- <a href="#about">About Us</a>
+           <a href="#menu">Menu</a>
+           <a href="#contact">Contact</a> -->
+       </nav>       
     <section class="hero">
+            
         <div>
             <h1>Welcome to Jamrock Cuisine</h1>
             <p>Experience the taste of Jamaica!</p>
         </div>
     </section>
     <div class="container">
-        <section id="menu" class="menu">
+        <!-- <script>
+            function initMap() {
+                let foodtruck = {lat:40.7419582, lng:-74.1767016}
+                let map = new google.maps.Map(
+                    document.getElementById("map"), {zoom:15,center:foodtruck}
+                )
+                let marker = new google.maps.Marker({position:foodtruck,map:map})
+            }
+        </script>
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoD3kJc9TPHmt8FnUFNwf342xJ8umjq5M&callback=initMap">
+        </script> -->
+        <section id="menu" class="menu green">
             <h2>Menu</h2>
             <div>
                 <div class="menu-item">
@@ -194,13 +261,31 @@
                         
             <!-- <p>Everything on the menu.</p> -->
         </section>
-        <section id="about" class="about">
+        <section id="about" class="about yellow">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Curabitur vehicula dui nec purus suscipit, ac varius nisi varius.</p>
+            <p>Welcome to Jamrock Cuisine! Our food truck is the heart and soul of a hardworking Jamaican immigrant mom who brought her passion for authentic Caribbean flavors to the streets.
+
+                Our story began with a simple dream: to share the vibrant, bold, and delicious tastes of Jamaica with our community. Every dish we serve is a tribute to the rich culinary heritage of our island home, prepared with love and the freshest ingredients.
+                
+                From savory jerk chicken to spicy escovitch fish, each recipe has been passed down through generations, bringing you a taste of home-cooked comfort. Our mission
+                
+                is to provide not just a meal, but an experience that transports you to the sunny beaches and bustling markets of Jamaica.
+                
+                At Jamrock Cuisine, we believe in the power of food to bring people together. Our food truck is more than just a place to grab a bite—it's a gathering spot for friends, family, and food lovers of all backgrounds. Whether you're a longtime fan of Jamaican cuisine or trying it for the first time, we promise a warm welcome and a meal that will leave you smiling.
+                
+                Join us on this flavorful journey and taste the difference that passion, tradition, and a mother's touch can make. Thank you for supporting our dream and allowing us to share a piece of Jamaica with you.</p>
         </section>
+        <section id="find" class="black find">
+            <h2 style="color: white;">Find us!</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.974518037088!2d-74.18019462370471!3d40.74058427138932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2537c2cc95e9b%3A0xcd67f7dc31ceebcb!2s112%20Warren%20St%2C%20Newark%2C%20NJ%2007103!5e0!3m2!1sen!2sus!4v1715749177089!5m2!1sen!2sus" width="600" height="450" style="width: 100%;min-height: 10px; border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
     </div>
-    <footer class="footer">
+    <footer class="footer black">
         <p>&copy; 2024 Jamrock Cuisine Food Truck. All rights reserved.</p>
+
     </footer>
 </body>
 </html>
+
+  
