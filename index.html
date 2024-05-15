@@ -12,6 +12,9 @@
     <title>Jamrock Cuisine Food Truck</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <style>
+        a {
+            color: #090a09;
+        }
         gmp-map {
             height: 100%;
         }
@@ -31,6 +34,8 @@
         }
         header h1 {
             margin: 0;
+            margin-top: 1em;
+            margin-bottom: 1em;
             font-size: 1.5em;
         }
         nav {
@@ -40,7 +45,7 @@
             text-align: center;
         }
         nav a {
-            color: #008000;
+            color: #333333;
             margin: 0 1em;
             text-decoration: none;
             font-weight: bold;
@@ -50,7 +55,7 @@
             background-image: url('PastaChickenSmall.jpeg'); /* Add a URL to your hero image */
             background-size: auto 100%;            
             background-position: center;
-            height: 400px;
+            height: 450px;
             color: white;
             display: flex;
             align-items: center;
@@ -88,12 +93,18 @@
             padding: 1em;
 
         }
+
         .about, .menu, .find {
+            text-align: center;
+            color: #333333 ;
             background-color: white;
             margin: 1em 0;
             padding: 1em;
             border-radius: 10px;
             box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+        .find {
+            color: white;
         }
         @media screen and (min-width: 480px) {
             .footer {
@@ -102,8 +113,8 @@
 
             }
             .container , .about, .menu, .find {
-            padding: 2em;
-            margin: 2em 0;
+            padding: 1em;
+            margin: 1.2em 0;
             
         }
     }
@@ -116,13 +127,14 @@
 
         }
         .yellow {
-            background-color: #ffd9007a;
+            background-color: #ffd900;
         }
         .green {
-            background-color: #008000a0;
+            background-color: #008000c1;
 
         }
         .menu-item{
+            color: #333333;
             width: 100%;
             min-width: 300px;
             margin: 1em 1em;
@@ -146,13 +158,17 @@
             width: 100%;
             height: 400px;
         }
-        .menu div {
+        .menu-scroll {
             display: flex;
-            overflow-x: auto;
+            overflow-x:auto;
+            scroll-snap-type: x mandatory;
         }
 
+
         .container {
-            padding-top: 10px;
+            padding-top: 3em;
+            position: relative;
+            margin-top: 0;
 
         }
         .black {
@@ -193,20 +209,54 @@
         }
  }
 
+    /* .container section h2 {
+        text-align: center;
+    }
+    .spacer {
+        
+        aspect-ratio: 4/2;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
+    .layer1 {
+        background-image: url('blob/layered-waves-haikei.svg');
 
+    }
+    .custom-shape-divider-top-1715762744 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1715762744 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 69px;
+}
+
+.custom-shape-divider-top-1715762744 .shape-fill {
+    fill: #008000;
+} */
 
     </style>
 </head>
+
 <body>
         
-        <header class="green">
-           <h1>Best Jamacian food in Newark! Made fresh to order</h1>
-       </header>
+
        <nav class="yellow">
-           <!-- <a href="#about">About Us</a>
-           <a href="#menu">Menu</a>
-           <a href="#contact">Contact</a> -->
+        <a href="#gmail">Call 1800-momo-truck</a>
+
+            <a href="#gmail">Order</a>
+
+           <a href="#gmail">Email</a>
        </nav>       
     <section class="hero">
             
@@ -214,8 +264,16 @@
             <h1>Welcome to Jamrock Cuisine</h1>
             <p>Experience a taste of Jamaica!</p>
         </div>
+
     </section>
+    </div>
+
     <div class="container">
+                <!-- <div class="custom-shape-divider-top-1715762744">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div> -->
         <!-- <script>
             function initMap() {
                 let foodtruck = {lat:40.7419582, lng:-74.1767016}
@@ -228,8 +286,8 @@
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoD3kJc9TPHmt8FnUFNwf342xJ8umjq5M&callback=initMap">
         </script> -->
         <section id="menu" class="menu green">
-            <h2>Menu</h2>
-            <div>
+            <h1>Menu</h1>
+            <div class="menu-scroll">
                 <div class="menu-item">
                     <img src="menuItems/brownStew.jpeg" alt="Dish 1"> <!-- Add the URL to your menu images -->
                     <h3>Brown stew pork</h3>
